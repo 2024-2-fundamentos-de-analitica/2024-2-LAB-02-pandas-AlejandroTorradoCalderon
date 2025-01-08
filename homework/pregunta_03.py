@@ -21,3 +21,8 @@ def pregunta_03():
     Name: count, dtype: int64
 
     """
+
+
+    import pandas as pd
+    tbl0 = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+    return tbl0.groupby('c1').size()
